@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">声音测试</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">降噪</string>
+    <string name="title_notifications">通知</string>
+    <string name="title_test_01">测试1</string>
+    <string name="title_test_02">测试2</string>
+</resources>

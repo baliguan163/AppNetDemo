@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fragment_test_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="28dp"
+        android:gravity="center"
+        android:text="ceshi"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+        android:id="@+id/btnFirmwareUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:text="001"
+        />
+        <Button
+        android:id="@+id/btnWavTest"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+            android:text="002"
+        />
+      </LinearLayout> 
+    
+</LinearLayout>
