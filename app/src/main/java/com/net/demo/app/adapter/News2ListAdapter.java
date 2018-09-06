@@ -8,9 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.net.demo.app.MyApp;
 import com.net.demo.app.utils.CallbackNew2View;
 import com.net.demo.app.bean.News2;
 import com.net.demo.app.R;
+import com.nostra13.universalimageloader.core.download.ImageDownloader;
 
 import java.util.List;
 
@@ -89,6 +91,10 @@ public class News2ListAdapter extends BaseAdapter implements CallbackNew2View {
         News2 news = list.get(i);
         vh.title.setText(news.getTitle());
         vh.img.setImageResource(news.getImg());
+
+//        String imageUri = "drawable://" + R.drawable.mei02; // from drawables (only images, non-9patch)
+//        String drawableUrl = ImageDownloader.Scheme.DRAWABLE.wrap("R.drawable.mei02");
+//        MyApp.getInstance().imageLoaderManager.displayImage(vh.img,drawableUrl);
         return view;
     }
 

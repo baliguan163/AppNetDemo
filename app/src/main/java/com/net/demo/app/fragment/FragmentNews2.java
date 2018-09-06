@@ -32,7 +32,6 @@ public class FragmentNews2 extends Fragment
 {
       private ViewPager vp;
       private PagerSlidingTabStrip pst;
-
       public static FragmentNews2 newInstance(String name)
       {
         Bundle args = new Bundle();
@@ -68,6 +67,7 @@ public class FragmentNews2 extends Fragment
             titles.add("奥运");
             titles.add("财经");
             titles.add("国际");
+
             for (int i=1;i<=10;i++){
                 Fragment fragment=new VpFragmentLv();
                 Bundle bundle=new Bundle();

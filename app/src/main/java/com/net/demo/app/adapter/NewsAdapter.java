@@ -4,6 +4,7 @@ package com.net.demo.app.adapter;
  * Created by Administrator on 2018/9/4.
  */
 
+import android.graphics.drawable.Drawable;
 import android.widget.BaseAdapter;;
 
 import java.util.ArrayList;
@@ -12,8 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.net.demo.app.MyApp;
 import com.net.demo.app.bean.NewsBean;
 import com.net.demo.app.R;
+import com.net.demo.app.utils.ImageLoaderManager;
+import com.nostra13.universalimageloader.core.download.ImageDownloader;
 
 public class NewsAdapter extends BaseAdapter {
 
@@ -71,7 +76,14 @@ public class NewsAdapter extends BaseAdapter {
         //3.获取postion位置条目对应的list集合中的新闻数据，Bean对象
         NewsBean newsBean = list.get(position);
         //4.将数据设置给这些子控件做显示
-        item_img_icon.setImageDrawable(newsBean.icon);//设置imageView的图片
+//        item_img_icon.setImageDrawable(newsBean.icon);//设置imageView的图片
+//        String imageUri = "drawable://" + R.drawable.mei02; // from drawables (only images, non-9patch)
+//        String drawableUrl = ImageDownloader.Scheme.DRAWABLE.wrap("R.drawable.mei02");
+        Drawable drawable = MyApp.getInstance().imageLoaderManager.zoomDrawable(newsBean.icon,100,75);
+        item_img_icon.setImageDrawable(drawable);//设置imageView的图片
+//        MyApp.getInstance().imageLoaderManager.displayImage(item_img_icon,drawableUrl);
+
+
         item_tv_title.setText(newsBean.title);
         item_tv_des.setText(newsBean.des);
         return view;

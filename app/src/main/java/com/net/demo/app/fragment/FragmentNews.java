@@ -1,9 +1,5 @@
 package com.net.demo.app.fragment;
 
-/**
- * Created by Administrator on 2018/9/6.
- */
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,15 +9,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.net.demo.app.R;
 import com.net.demo.app.adapter.NewsAdapter;
 import com.net.demo.app.bean.NewsBean;
 import com.net.demo.app.utils.NewsUtils;
 import java.util.ArrayList;
-
-/**
- * Created by Administrator on 2018/9/4.
- */
-
 public  class FragmentNews extends Fragment {
 
     //    private TextView tv;
@@ -40,7 +33,7 @@ public  class FragmentNews extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(com.net.demo.appnetdemo.R.layout.fragment_news, container, false);
+        View view = inflater.inflate(R.layout.fragment_news, container, false);
         return view;
     }
 
@@ -50,7 +43,7 @@ public  class FragmentNews extends Fragment {
 
         mlist = NewsUtils.getAllNews(getActivity());
         //创建了个ListView变量用来获取layout中的ListView
-        ListView lv1 = (ListView) view.findViewById(com.net.demo.appnetdemo.R.id.lv1);
+        ListView lv1 = (ListView) view.findViewById(R.id.lv1);
         //建一个适配的变量，将上下文和list加载到ListVIew的适配器中，然后放到适配器变量里
 
         //        ArrayList<NewsBean> list

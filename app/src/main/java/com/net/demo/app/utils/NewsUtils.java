@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.v4.content.ContextCompat;
 
 import com.net.demo.app.bean.NewsBean;
-import com.net.demo.appnetdemo.R;
+import com.net.demo.app.R;
 
 import java.util.ArrayList;
 
@@ -33,8 +33,6 @@ public class NewsUtils {
             newsBean1.news_url= "http://www.baidu.cn";
             newsBean1.icon = ContextCompat.getDrawable(context, R.drawable.mei05);;//通过context对象将一个资源id转换成一个Drawable对象。
             arrayList.add(newsBean1);
-
-
 
             NewsBean newsBean2 = new NewsBean();
             newsBean2.title ="豆腐皮人热舞";

@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.net.demo.appnetdemo.R;
+import com.net.demo.app.R;
 
 /**
  * Created by Administrator on 2018/9/4.
