@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,16 +13,13 @@ public class ViewPagerPageAdapter extends FragmentPagerAdapter {
         this.list = list;
         notifyDataSetChanged();
     }
-
     public ViewPagerPageAdapter(FragmentManager fm) {
         super(fm);
     }
-
     @Override
     public Fragment getItem(int position) {
         return list.get(position);
     }
-
     @Override
     public int getCount() {
         return list != null ? list.size() : 0;

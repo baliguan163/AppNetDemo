@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.utils;
 
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;

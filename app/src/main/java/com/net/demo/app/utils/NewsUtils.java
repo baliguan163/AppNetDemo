@@ -1,7 +1,10 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.utils;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
+
+import com.net.demo.app.bean.NewsBean;
+import com.net.demo.appnetdemo.R;
 
 import java.util.ArrayList;
 

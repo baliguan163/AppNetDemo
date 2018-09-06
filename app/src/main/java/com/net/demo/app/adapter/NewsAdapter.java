@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.adapter;
 
 /**
  * Created by Administrator on 2018/9/4.
@@ -6,15 +6,14 @@ package com.net.demo.appnetdemo;
 
 import android.widget.BaseAdapter;;
 
-        import java.util.ArrayList;
-        import android.content.Context;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.BaseAdapter;
-        import android.widget.ImageView;
-        import android.widget.TextView;
-
+import java.util.ArrayList;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.net.demo.app.bean.NewsBean;
+import com.net.demo.app.R;
 
 public class NewsAdapter extends BaseAdapter {
 

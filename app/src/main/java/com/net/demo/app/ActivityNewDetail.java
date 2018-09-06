@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.net.demo.appnetdemo.R;
 
 /**
  * Created by Administrator on 2018/9/4.

@@ -1,30 +1,43 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.fragment;
 
-        import android.os.Bundle;
-        import android.support.annotation.Nullable;
-        import android.support.v4.app.Fragment;
-        import android.support.v4.view.ViewPager;
-        import android.support.v7.app.AppCompatActivity;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import com.astuetz.PagerSlidingTabStrip;
+import com.net.demo.app.adapter.MyVpFragmentAdapter;
+import com.net.demo.app.adapter.VpFragmentLv;
+import com.net.demo.app.R;
+import java.util.ArrayList;
+import java.util.List;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-        import com.astuetz.PagerSlidingTabStrip;
+import com.astuetz.PagerSlidingTabStrip;
+import com.net.demo.app.R;
+import com.net.demo.app.adapter.MyVpFragmentAdapter;
+import com.net.demo.app.adapter.VpFragmentLv;
 
-        import java.util.ArrayList;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
-public class VpFragmentLvfragment extends Fragment
+public class FragmentNews2 extends Fragment
 {
       private ViewPager vp;
       private PagerSlidingTabStrip pst;
 
-      public static VpFragmentLvfragment newInstance(String name)
+      public static FragmentNews2 newInstance(String name)
       {
         Bundle args = new Bundle();
         args.putString("name", name);
-
-        VpFragmentLvfragment fragment = new VpFragmentLvfragment();
+        FragmentNews2 fragment = new FragmentNews2();
         fragment.setArguments(args);
         return fragment;
        }

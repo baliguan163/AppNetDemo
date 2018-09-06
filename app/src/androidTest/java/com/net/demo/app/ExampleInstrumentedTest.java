@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

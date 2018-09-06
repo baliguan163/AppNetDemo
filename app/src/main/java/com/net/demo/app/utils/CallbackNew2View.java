@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.utils;
 
 import android.view.View;
 

@@ -1,6 +1,5 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.adapter;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,13 +10,17 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.net.demo.app.utils.CallbackNew2View;
+import com.net.demo.app.bean.News2;
+import com.net.demo.app.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class VpFragmentLv extends Fragment implements AdapterView.OnItemClickListener,CallbackNew2View{
+public class VpFragmentLv extends Fragment implements AdapterView.OnItemClickListener,CallbackNew2View {
 
     List<News2> list;
 

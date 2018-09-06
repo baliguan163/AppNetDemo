@@ -1,14 +1,16 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.net.demo.app.utils.CallbackNew2View;
+import com.net.demo.app.bean.News2;
+import com.net.demo.app.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;

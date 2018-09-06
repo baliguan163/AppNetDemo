@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,10 +7,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
+import com.net.demo.app.fragment.FragmentBase;
+import com.net.demo.app.adapter.ViewPagerPageAdapter;
+import com.net.demo.app.fragment.FragmentNews2;
+import com.net.demo.app.fragment.FragmentNews;
+import com.net.demo.app.utils.BottomNavigationViewHelper;
+import com.net.demo.app.R;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.net.demo.app.fragment.FragmentAudio;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -107,11 +114,11 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter = new ViewPagerPageAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
         List<Fragment> list = new ArrayList<>();
-        list.add(TestFragment.newInstance("首页"));
+        list.add(FragmentBase.newInstance("首页"));
         list.add(FragmentAudio.newInstance("降噪"));
         list.add(FragmentNews.newInstance("测试0"));
-        list.add(VpFragmentLvfragment.newInstance("测试1"));
-        list.add(TestFragment.newInstance("测试2"));
+        list.add(FragmentNews2.newInstance("测试1"));
+        list.add(FragmentBase.newInstance("测试2"));
         viewPagerAdapter.setList(list);
 
 

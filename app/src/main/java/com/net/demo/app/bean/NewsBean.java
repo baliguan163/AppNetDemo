@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.bean;
 
 /**
  * Created by Administrator on 2018/9/4.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.net.demo.appnetdemo">
+    package="com.net.demo.app">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.net.demo.app.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.net.demo.appnetdemo.ActivityNewDetail"
+        <activity android:name="com.net.demo.app.ActivityNewDetail"
            >
         </activity>
     </application>

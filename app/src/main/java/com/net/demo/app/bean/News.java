@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.bean;
 
 import java.io.Serializable;
 

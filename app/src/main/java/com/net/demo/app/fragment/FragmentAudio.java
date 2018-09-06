@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.fragment;
 
 import android.content.Context;
 import android.media.AudioFormat;
@@ -14,18 +14,25 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ListView;
 import android.widget.SeekBar;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.net.demo.app.adapter.NewsAdapter;
+import com.net.demo.app.bean.NewsBean;
+import com.net.demo.app.utils.NewsUtils;
+import com.net.demo.appnetdemo.R;
 
 import net.iwebrtc.audioprocess.sdk.AudioProcess;
 
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -160,6 +167,8 @@ public class FragmentAudio extends Fragment implements View.OnClickListener {
                 isRecording = true;
                 Log.d(TAG, "btnJZTest isRecording:" + isRecording);
                 new JZRecordPlayThread().start();
+//                new JZRecordPlayThreadPlaySound().start();
+
             }
         }
     }
@@ -287,6 +296,7 @@ public class FragmentAudio extends Fragment implements View.OnClickListener {
                         mPlayIndex = 0;
                     }
 
+//                   Thread.sleep(1000);
                     is.skip(44);
                     while ((length = is.read(buffer)) > 0)
                     {
@@ -325,5 +335,37 @@ public class FragmentAudio extends Fragment implements View.OnClickListener {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    class JZRecordPlayThreadPlaySound extends Thread {
+        public void run() {
+            try {
+                while (isRecording)
+                {
+                    mPlayIndex ++;
+                    playSound(mPlayIndex, 0);
+                    if(mPlayIndex >=5){
+                        mPlayIndex = 0;
+                    }
+                    Thread.sleep(300);
+                }
+            } catch (Throwable t) {
+                Log.d(TAG, "", t);
+            }
+        }
+    };
 
 }

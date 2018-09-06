@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.adapter;
 
 /**
  * Created by Administrator on 2018/9/4.
@@ -23,12 +23,10 @@ public class MyVpFragmentAdapter  extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         return list.get(position);
     }
-
     @Override
     public int getCount() {
         return list.size();
     }
-
     @Override
     public CharSequence getPageTitle(int position) {
         return titles.get(position);

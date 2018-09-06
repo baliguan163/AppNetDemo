@@ -1,4 +1,4 @@
-package com.net.demo.appnetdemo;
+package com.net.demo.app.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,20 +8,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.net.demo.appnetdemo.R;
+
 /**
  * Created by Administrator on 2018/9/4.
  */
 
-public class TestFragment extends Fragment {
+public class FragmentBase extends Fragment {
 
     private TextView tv;
 
-    public static TestFragment newInstance(String name) {
+    public static FragmentBase newInstance(String name) {
 
         Bundle args = new Bundle();
         args.putString("name", name);
 
-        TestFragment fragment = new TestFragment();
+        FragmentBase fragment = new FragmentBase();
         fragment.setArguments(args);
         return fragment;
     }
