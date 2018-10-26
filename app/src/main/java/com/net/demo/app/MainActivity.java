@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.net.demo.app.fragment.FragmentBase;
 import com.net.demo.app.adapter.ViewPagerPageAdapter;
+import com.net.demo.app.fragment.FragmentBase4;
 import com.net.demo.app.fragment.FragmentNews2;
 import com.net.demo.app.fragment.FragmentNews;
 import com.net.demo.app.utils.BottomNavigationViewHelper;
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(FragmentAudio.newInstance("降噪"));
         list.add(FragmentNews.newInstance("测试0"));
         list.add(FragmentNews2.newInstance("测试1"));
-        list.add(FragmentBase.newInstance("测试2"));
+        list.add(FragmentBase4.newInstance("测试2"));
 //        list.add(FragmentBase.newInstance("测试3"));
         viewPagerAdapter.setList(list);
 

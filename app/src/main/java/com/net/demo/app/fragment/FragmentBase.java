@@ -14,12 +14,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.net.demo.app.R;
 import com.net.demo.app.adapter.NewsAdapter;
 import com.net.demo.app.bean.NewsBean;
+import com.net.demo.app.utils.DateUtils;
 import com.net.demo.app.utils.NewsUtils;
 import com.net.demo.app.utils.Utils;
 import com.scwang.smartrefresh.header.MaterialHeader;
@@ -87,6 +90,19 @@ public class FragmentBase extends Fragment{
         mNewsAdapter = new NewsAdapter(getActivity(), mList);
         mListView.setAdapter(mNewsAdapter);
         Log.d(Utils.TAG, "mList size:" + mList.size());
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                NewsBean news = mList.get(i);
+                Toast.makeText(getActivity(), news.getTitle(), Toast.LENGTH_SHORT).show();
+                //                Intent intent = new Intent(getActivity(), ActivityNewDetail.class);
+                //                intent.putExtra("obj",news);
+                //                Bundle bundle1 = new Bundle();
+                //                bundle1.putString("arg1","新闻详情");
+                //                intent.putExtra("bundle",bundle1);
+                //                startActivity(intent);
+            }
+        });
 
         refreshLayout = (RefreshLayout) view.findViewById(R.id.refreshLayout);
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
@@ -102,29 +118,29 @@ public class FragmentBase extends Fragment{
                 {
 
                     NewsBean newsBean = new NewsBean();
-                    newsBean.title ="火箭发射成功" + i + i +  new Date().toString();
-                    newsBean.des= "搜索算法似懂非懂三分得手房贷首付第三方的手";
+                    newsBean.title ="火箭发射成功_上拉";
+                    newsBean.des=  DateUtils.getStringDate() + "搜索算法似懂非懂三分得手房贷首付第三方的手";
                     newsBean.news_url= "http://www.sina.cn";
                     newsBean.icon = getActivity().getDrawable(R.drawable.mei02);; //通过context对象将一个资源id转换成一个Drawable对象。
                     mList.add(newsBean);
 
                     NewsBean newsBean1 = new NewsBean();
-                    newsBean1.title ="似懂非懂瑟瑟发抖速度" + i + i +  new Date().toString();
-                    newsBean1.des= "地方上的房贷首付读书首付第三方的手房贷首付第三方的手负担";
+                    newsBean1.title ="似懂非懂瑟瑟发抖速度_上拉";
+                    newsBean1.des=  DateUtils.getStringDate() + "地方上的房贷首付读书首付第三方的手房贷首付第三方的手负担";
                     newsBean1.news_url= "http://www.baidu.cn";
                     newsBean1.icon = getActivity().getDrawable(R.drawable.mei05);;//通过context对象将一个资源id转换成一个Drawable对象。
                     mList.add(newsBean1);
 
                     NewsBean newsBean2 = new NewsBean();
-                    newsBean2.title ="豆腐皮人热舞" + i + i +  new Date().toString();
-                    newsBean2.des= "费解的是离开房间打扫李开复离开独守空房迪斯科浪费电锋克劳利分级恐龙快打";
+                    newsBean2.title ="豆腐皮人热舞_上拉";
+                    newsBean2.des=  DateUtils.getStringDate() + "费解的是离开房间打扫李开复离开独守空房迪斯科浪费电锋克劳利分级恐龙快打";
                     newsBean2.news_url= "http://www.qq.com";
                     newsBean2.icon = getActivity().getDrawable(R.drawable.mei02);;//通过context对象将一个资源id转换成一个Drawable对象。
                     mList.add(newsBean2);
                 }
                 //模拟网络请求到的数据
                 mNewsAdapter.notifyDataSetChanged();
-                refreshlayout.finishRefresh(2000/*,false*/);
+                refreshlayout.finishRefresh(2000,true);
                 //不传时间则立即停止刷新    传入false表示刷新失败
             }
         });
@@ -140,29 +156,29 @@ public class FragmentBase extends Fragment{
                 {
 
                     NewsBean newsBean = new NewsBean();
-                    newsBean.title ="火箭发射成功" + i + i + i +  new Date().toString();
-                    newsBean.des= "搜索算法似懂非懂三分得手房贷首付第三方的手";
+                    newsBean.title ="火箭发射成功_加载";
+                    newsBean.des=  DateUtils.getStringDate() + "搜索算法似懂非懂三分得手房贷首付第三方的手";
                     newsBean.news_url= "http://www.sina.cn";
                     newsBean.icon = getActivity().getDrawable(R.drawable.mei02);; //通过context对象将一个资源id转换成一个Drawable对象。
                     mList.add(newsBean);
 
                     NewsBean newsBean1 = new NewsBean();
-                    newsBean1.title ="似懂非懂瑟瑟发抖速度"+ i + i + i+  new Date().toString();
-                    newsBean1.des= "地方上的房贷首付读书首付第三方的手房贷首付第三方的手负担";
+                    newsBean1.title ="似懂非懂瑟瑟发抖速度_加载";
+                    newsBean1.des=  DateUtils.getStringDate() + "地方上的房贷首付读书首付第三方的手房贷首付第三方的手负担";
                     newsBean1.news_url= "http://www.baidu.cn";
                     newsBean1.icon = getActivity().getDrawable(R.drawable.mei05);;//通过context对象将一个资源id转换成一个Drawable对象。
                     mList.add(newsBean1);
 
                     NewsBean newsBean2 = new NewsBean();
-                    newsBean2.title ="豆腐皮人热舞"+ i + i + i+  new Date().toString();
-                    newsBean2.des= "费解的是离开房间打扫李开复离开独守空房迪斯科浪费电锋克劳利分级恐龙快打";
+                    newsBean2.title ="豆腐皮人热舞_加载";
+                    newsBean2.des=  DateUtils.getStringDate() + "费解的是离开房间打扫李开复离开独守空房迪斯科浪费电锋克劳利分级恐龙快打";
                     newsBean2.news_url= "http://www.qq.com";
                     newsBean2.icon = getActivity().getDrawable(R.drawable.mei02);;//通过context对象将一个资源id转换成一个Drawable对象。
                     mList.add(newsBean2);
                 }
                 //模拟网络请求到的数据
                 mNewsAdapter.notifyDataSetChanged();
-                refreshlayout.finishRefresh(2000/*,false*/);
+                refreshlayout.finishRefresh(2000,true);
                 //不传时间则立即停止刷新    传入false表示刷新失败
             }
         });
