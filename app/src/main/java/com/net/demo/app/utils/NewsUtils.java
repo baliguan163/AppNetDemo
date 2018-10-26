@@ -18,24 +18,24 @@ public class NewsUtils {
     public static ArrayList<NewsBean> getAllNews(Context context) {
 
         ArrayList<NewsBean> arrayList = new ArrayList<NewsBean>();
-        for(int i = 0 ;i <100;i++)
+        for(int i = 0 ;i <5;i++)
         {
             NewsBean newsBean = new NewsBean();
-            newsBean.title ="火箭发射成功";
+            newsBean.title ="火箭发射成功" + i;
             newsBean.des= "搜索算法似懂非懂三分得手房贷首付第三方的手";
             newsBean.news_url= "http://www.sina.cn";
             newsBean.icon = ContextCompat.getDrawable(context, R.drawable.mei02);; //通过context对象将一个资源id转换成一个Drawable对象。
             arrayList.add(newsBean);
 
             NewsBean newsBean1 = new NewsBean();
-            newsBean1.title ="似懂非懂瑟瑟发抖速度";
+            newsBean1.title ="似懂非懂瑟瑟发抖速度"+ i;
             newsBean1.des= "地方上的房贷首付读书首付第三方的手房贷首付第三方的手负担";
             newsBean1.news_url= "http://www.baidu.cn";
             newsBean1.icon = ContextCompat.getDrawable(context, R.drawable.mei05);;//通过context对象将一个资源id转换成一个Drawable对象。
             arrayList.add(newsBean1);
 
             NewsBean newsBean2 = new NewsBean();
-            newsBean2.title ="豆腐皮人热舞";
+            newsBean2.title ="豆腐皮人热舞"+ i;
             newsBean2.des= "费解的是离开房间打扫李开复离开独守空房迪斯科浪费电锋克劳利分级恐龙快打";
             newsBean2.news_url= "http://www.qq.com";
             newsBean2.icon = ContextCompat.getDrawable(context, R.drawable.mei02);;//通过context对象将一个资源id转换成一个Drawable对象。

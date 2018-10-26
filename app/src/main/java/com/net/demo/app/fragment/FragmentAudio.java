@@ -18,21 +18,13 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.Toast;
-
-import com.net.demo.app.adapter.NewsAdapter;
-import com.net.demo.app.bean.NewsBean;
-import com.net.demo.app.utils.NewsUtils;
-import com.net.demo.appnetdemo.R;
-
+import com.net.demo.app.R;
 import net.iwebrtc.audioprocess.sdk.AudioProcess;
-
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**

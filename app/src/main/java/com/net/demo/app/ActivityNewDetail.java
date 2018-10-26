@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.net.demo.appnetdemo.R;
 
 /**
  * Created by Administrator on 2018/9/4.

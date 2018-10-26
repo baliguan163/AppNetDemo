@@ -32,4 +32,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //add SmartRefreshLayout
+    //发现bug请加群提出，并切换 1.0.3 版本
+    //compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-4'
+    //compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-4'//没有使用特殊Header，可以不加这行
+//    compile 'com.android.support:appcompat-v7:25.3.1'//版本随意（必须）
+//    compile 'com.android.support:design:25.3.1'//版本随意（非必须，引用可以解决无法预览问题）
+    //稳定版
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
+
+
+
 }
