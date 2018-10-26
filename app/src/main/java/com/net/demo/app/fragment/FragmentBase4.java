@@ -119,7 +119,7 @@ public class FragmentBase4 extends Fragment{
 
 
         refreshLayout.setOnMultiPurposeListener(new SimpleMultiPurposeListener(){
-
+//       厨房放电饭锅和
         });
 
         refreshLayout.setOnMultiPurposeListener(new SimpleMultiPurposeListener() {
